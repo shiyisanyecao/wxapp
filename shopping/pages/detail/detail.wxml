@@ -1,0 +1,5 @@
+<view class="container">
+    <text>{{name}}</text>
+    <text>{{tel}}</text>
+    <text>{{addr}}</text>
+</view>

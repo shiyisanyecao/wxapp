@@ -1,0 +1,6 @@
+<view class="container">
+    <input value="{{name}}" bindinput="getName"  class="name" type="text" placeholder="姓名"/>
+    <input value="{{telphone}}" bindinput="getTel" class="telphone" type="text" placeholder="电话号码"/>
+    <input value="{{address}}" bindinput="getAddr" class="address" type="text" placeholder="详细地址"/>
+    <button class="save" bindtap="save">保存</button>
+</view>

@@ -1,0 +1,21 @@
+<view class="container">
+    <view class="main">
+        <swiper indicator-dots="{{true}}" autoplay="{{true}}" duration="1000">
+            <swiper-item wx:for="{{swiper}}" wx:key="index" >
+                <navigator  url="">
+                    <image mode="aspectFit" src="{{item.src}}"/>
+                </navigator>
+            </swiper-item>
+        </swiper>
+        <navigator url="/pages/search/search" open-type="switchTab">
+            <input type="text" placeholder="请输入搜索内容"/><p>搜索</p>
+        </navigator>
+    </view>
+    <view class="row">
+        <navigator class="row-col" wx:for="{{clothes}}" wx:key="index">
+            <image src="{{item.src}}"/>
+            <text>{{item.name}}</text>
+            <p>￥{{item.price}}元</p>
+        </navigator>
+    </view>
+</view>

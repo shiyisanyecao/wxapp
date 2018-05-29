@@ -1,0 +1,13 @@
+<!-- <view class="container">
+    <input type="text" class="bd__input" placeholder="请输入手机号"/>
+    <button class="bd__btn">下一步</button>
+    <input type="checkbox" class="ft__input"/>
+    <span class="ft__text">阅读并同意《相关条款》</span>
+</view> -->
+<view class="main">
+    <view class="header">
+        <open-data class="thumb" type="userAvatarUrl"></open-data>
+        <open-data class="nickname" lang="zh_CN" type="userNickName"></open-data>
+        <text class="about">关于我们</text>
+    </view>
+</view>

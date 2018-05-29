@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/action/actionsheet"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "登录",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#46C01B",
+    "backgroundColor": "#FCFCFC",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "Me",
+        "iconPath": "images/icon_index.png",
+        "selectedIconPath": "images/icon_index_hl.png"
+      },
+      {
+        "pagePath": "pages/action/actionsheet",
+        "text": "我的",
+        "iconPath": "images/icon_home.png",
+        "selectedIconPath": "images/icon_home_hl.png"
+      }
+    ]
+  }
+}

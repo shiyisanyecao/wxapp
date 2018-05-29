@@ -1,0 +1,36 @@
+.container {
+    position: relative;
+    height: 100%;
+    width: 100px;
+}
+.name {
+    position: absolute;
+    top: 30rpx;
+    width: 750rpx;
+    line-height: 70rpx;
+    height: 70rpx;
+    border-bottom: 1px solid #e9e9e9;
+}
+.telphone {
+    position: absolute;
+    top: 130rpx;
+    width: 750rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    border-bottom: 1px solid #e9e9e9;
+}
+.address {
+    position: absolute;
+    top: 230rpx;
+    width: 750rpx;
+    line-height: 70rpx;
+    height:70rpx;
+    border-bottom: 1px solid #e9e9e9;
+}
+.save {
+    position: absolute;
+    top: 330rpx;
+    width: 750rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+}

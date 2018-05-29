@@ -1,0 +1,4 @@
+<navigator class="container" url="../address/address">
+    <view class="addrmang">地址管理</view>
+    <i class="iconfont icon-jiankuohaoxiyou lg"></i>
+</navigator>

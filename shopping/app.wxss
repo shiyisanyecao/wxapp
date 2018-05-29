@@ -1,0 +1,9 @@
+@import '/iconfont.wxss';
+page {
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 32rpx;
+}
+.navigator-hover {
+  background: none;
+}

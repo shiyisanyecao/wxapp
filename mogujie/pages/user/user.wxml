@@ -1,0 +1,58 @@
+<view class="weui-cells">
+  <navigator class="weui-cell weui-cell_access head" url="" hover-class="weui-cell_active">
+    <view class="weui-cell__hd">
+      <image src="{{userInfo.avatarUrl}}"/>
+    </view>
+    <view class="weui-cell__bd">
+      <view class="name">{{userInfo.nickName}}</view>
+      <view class="stu_id">{{stu_id}}</view>
+    </view>
+    <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
+  </navigator>
+</view>
+<view class="weui-cells">
+  <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="">
+    <view class="weui-cell__hd">
+      <image src="/image/jinbi.png"/>
+    </view>
+    <view class="weui-cell__bd">我的分享金</view>
+    <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
+  </navigator>
+  <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="">
+    <view class="weui-cell__hd">
+      <image src="/image/youhuiquan.png"/>
+    </view>
+    <view class="weui-cell__bd">优惠券</view>
+    <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
+  </navigator>
+  <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="">
+    <view class="weui-cell__hd">
+      <image src="/image/xiaoxi.png"/>
+    </view>
+    <view class="weui-cell__bd">我的消息</view>
+    <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
+  </navigator>
+  <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__hd">
+      <image src="/image/chongzhi.png" />
+    </view>
+    <view class="weui-cell__bd">充值中心</view>
+    <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
+  </navigator>
+</view>
+<view class="weui-cells">
+    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+            <image src="/image/kefu.png" />
+        </view>
+        <view class="weui-cell__bd">客服与帮助</view>
+        <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+            <image src="/image/yijian.png" />
+        </view>
+        <view class="weui-cell__bd">意见反馈</view>
+        <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
+    </navigator>
+</view>
