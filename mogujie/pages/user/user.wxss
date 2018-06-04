@@ -26,3 +26,19 @@
   margin-left: 5px;
   vertical-align: middle;
 }
+.weui-cell_all {
+  display: flex;
+  justify-content: space-between;
+  padding: 40rpx 46rpx 0 46rpx;
+}
+.weui-cell_all .all {
+  display: flex;
+  flex-direction: column;
+}
+.weui-cell_all .all image {
+  height: 80rpx;
+  width: 80rpx;
+}
+.weui-cell_all .all .text {
+  font-size: 12px;
+}

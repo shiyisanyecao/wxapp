@@ -1,0 +1,9 @@
+<view class="box">
+    <view class="container">
+        <navigator class="box" wx:for="{{detail}}" wx:key="index" url="{{item.url}}">
+            <image src="{{item.src}}"></image>
+            <text>{{item.text}}</text>
+            <p>￥{{item.price}}</p>
+        </navigator>
+    </view>
+</view>

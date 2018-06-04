@@ -10,6 +10,14 @@
     <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
   </navigator>
 </view>
+<view class="weui-cell_all">
+  <view wx:for="{{user}}" wx:key="index">
+    <navigator url="{{item.url}}" class="all">
+      <image src="{{item.src}}"/>
+      <text class="text">{{item.text}}</text>
+    </navigator>
+  </view>
+</view>
 <view class="weui-cells">
   <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="">
     <view class="weui-cell__hd">

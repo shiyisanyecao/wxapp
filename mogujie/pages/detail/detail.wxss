@@ -1,0 +1,16 @@
+.container {
+    white-space: nowrap;
+}
+.box {
+    display: inline-block;
+}
+.weui_hd {
+    padding: 0 10rpx;
+}
+.on {
+    border-bottom: 4rpx solid red;
+    color: red;
+}
+.hide {
+    display: none;
+}

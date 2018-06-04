@@ -1,51 +1,62 @@
-// pages/User/user.js
-const app = getApp()
+// pages/detail/detail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    stu_id: '3930',
-    userInfo: {},
-    user:[
+    current:0,
+    bodyList:[
       {
         id:'1',
-        url:'pages/detail/detail',
-        src:'../../image/fukuan.png',
-        text:'待付款'
-      },
-      {
+        title:'女装'
+      },{
         id:'2',
-        url:'pages/detail/detail',
-        src:'../../image/shoukuan.png',
-        text:'待收款'
-      },
-      {
+        title:'时尚套装'
+      },{
         id:'3',
-        url:'pages/detail/detail',
-        src:'../../image/pingjia.png',
-        text:'待评价'
-      },
-      {
+        title:'T恤'
+      },{
         id:'4',
-        url:'pages/detail/detail',
-        src:'../../image/all.png',
-        text:'全部订单'
+        title:'连衣裙'
+      },{
+        id:'5',
+        title:'短裙'
+      },{
+        id:'6',
+        title:'雪纺衫'
+      },{
+        id:'7',
+        title:'休闲裤'
+      },{
+        id:'8',
+        title:'半身裙'
+      },{
+        id:'9',
+        title:'牛仔裤'
+      },{
+        id:'10',
+        title:'衬衫'
+      },{
+        id:'11',
+        title:'背带裤'
       }
     ],
+    activeIndex: 0,
   },
-  
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      userInfo:app.globalData.userInfo
-    })
   },
-
+  tabClick: function(e) {
+    var id = e.currentTarget.id;
+    this.setData({
+      activeIndex:id,
+      current: id
+    }) 
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

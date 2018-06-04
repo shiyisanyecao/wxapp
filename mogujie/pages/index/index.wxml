@@ -2,17 +2,28 @@
     <view class="main">
         <swiper indicator-dots="{{true}}" autoplay="{{true}}" duration="1000">
             <swiper-item wx:for="{{swiper}}" wx:key="index" >
-                <navigator  url="">
+                <navigator  url="{{item.url}}">
                     <image mode="aspectFit" src="{{item.src}}"/>
                 </navigator>
             </swiper-item>
         </swiper>
         <navigator url="/pages/search/search" open-type="switchTab">
-            <input type="text" placeholder="请输入搜索内容"/><p>搜索</p>
+            <input type="text" placeholder-style="text-align:center;font-size:15px;" placeholder="海量搜索等你来"/>
         </navigator>
     </view>
-    <view class="row">
-        <navigator class="row-col" wx:for="{{clothes}}" wx:key="index">
+    <view class="circle_container">
+        <view class="circle" wx:for="{{circle}}" wx:key="index">
+            <navigator url="{{item.url}}" class="circle_min"><image class="image" src="{{item.src}}"/></navigator>
+            <view class="text">{{item.title}}</view>
+        </view>
+    </view>
+    <view class="scroll">
+        <image class="left"  src="http://s10.mogucdn.com/mlcdn/c45406/180424_2ikae4b89910ejk2if8ci683a1900_940x300.png_600x9999.v1c7E.webp"/>
+        <image class="right" src="http://s10.mogucdn.com/mlcdn/c45406/180426_219al1b30e2la5ej2d0ahk45599aj_690x450.png_300x9999.v1c7E.webp"/>
+    </view>
+    <view class="blank"></view>
+    <view class="row" >
+        <navigator class="row-col" url="{{item.url}}" wx:for="{{clothes}}" wx:key="index">
             <image src="{{item.src}}"/>
             <text>{{item.name}}</text>
             <p>￥{{item.price}}元</p>

@@ -1,49 +1,18 @@
-// pages/User/user.js
-const app = getApp()
+// pages/goods/goods.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    stu_id: '3930',
-    userInfo: {},
-    user:[
-      {
-        id:'1',
-        url:'pages/detail/detail',
-        src:'../../image/fukuan.png',
-        text:'待付款'
-      },
-      {
-        id:'2',
-        url:'pages/detail/detail',
-        src:'../../image/shoukuan.png',
-        text:'待收款'
-      },
-      {
-        id:'3',
-        url:'pages/detail/detail',
-        src:'../../image/pingjia.png',
-        text:'待评价'
-      },
-      {
-        id:'4',
-        url:'pages/detail/detail',
-        src:'../../image/all.png',
-        text:'全部订单'
-      }
-    ],
-  },
   
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      userInfo:app.globalData.userInfo
-    })
+  
   },
 
   /**

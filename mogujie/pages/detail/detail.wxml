@@ -1,0 +1,8 @@
+<scroll-view class="container" scroll-x="true">
+    <view class="box" wx:for="{{bodyList}}" wx:key="{{index}}">
+        <view id="{{index}}" class="weui_hd {{activeIndex == index ? 'on' : ''}}" bindtap="tabClick">{{item.title}}</view>
+    </view>
+    <view class="detail {{current == 0 ? '' : 'hide'}}"></view>
+    <view class="detail {{current == 1 ? '' : 'hide'}}"></view>
+    <view class="detail {{current == 2 ? '' : 'hide'}}"></view>
+</scroll-view>

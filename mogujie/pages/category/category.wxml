@@ -1,2 +1,32 @@
-<!--pages/category/category.wxml-->
-<text>pages/category/category.wxml</text>
+<view class="container">
+    <view class="box">
+        <text class="box_hd">应季上新</text>
+        <view class="circle_detail">
+            <view wx:for="{{circle}}" wx:key="index">
+                <navigator class="nav" url="{{item.url}}">
+                    <image src="{{item.src}}"/>
+                    <text class="text">{{item.text}}</text>
+                </navigator>
+            </view>
+        </view>
+    </view>
+    <view class="weui-cells">
+        <navigator class="weui-cell weui-cell_access" wx:for="{{detail}}" wx:key="index" hover-class="weui-cell_active" url="{{item.url}}">
+            <view class="weui-cell__hd">
+                <image src="{{item.src}}"/>
+            </view>
+            <view class="weui-cell__bd">{{item.text}}</view>
+            <p>{{item.title}}</p>
+            <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
+        </navigator>
+    </view>
+    <view class="weui-cells">
+        <navigator class="weui-cell weui-cell_access" wx:for="{{details}}" wx:key="index" hover-class="weui-cell_active" url="{{item.url}}">
+            <view class="weui-cell__hd">
+                <image src="{{item.src}}"/>
+            </view>
+            <view class="weui-cell__bd">{{item.text}}</view>
+            <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
+        </navigator>
+    </view>
+</view>
