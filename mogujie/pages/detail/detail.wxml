@@ -2,7 +2,7 @@
     <view class="box" wx:for="{{bodyList}}" wx:key="{{index}}">
         <view id="{{index}}" class="weui_hd {{activeIndex == index ? 'on' : ''}}" bindtap="tabClick">{{item.title}}</view>
     </view>
-    <view class="detail {{current == 0 ? '' : 'hide'}}"></view>
-    <view class="detail {{current == 1 ? '' : 'hide'}}"></view>
-    <view class="detail {{current == 2 ? '' : 'hide'}}"></view>
+    <view class="detail {{current == 0 ? '' : 'hide'}}">我是1</view>
+    <view class="detail {{current == 1 ? '' : 'hide'}}">我是2</view>
+    <view class="detail {{current == 2 ? '' : 'hide'}}">我是3</view>
 </scroll-view>

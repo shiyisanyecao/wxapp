@@ -60,43 +60,43 @@ Page({
       {
         id:'1',
         url:'/pages/detail/detail',
-        src:'image/',
+        src:'/image/',
         text:'内衣'
       },
       {
         id:'2',
         url:'/pages/detail/detail',
-        src:'image/',
+        src:'/image/',
         text:'包包'
       },
       {
         id:'3',
         url:'/pages/detail/detail',
-        src:'image/',
+        src:'/image/',
         text:'配饰'
       },
       {
         id:'4',
         url:'/pages/detail/detail',
-        src:'image/',
+        src:'/image/',
         text:'家居'
       },
       {
         id:'5',
         url:'/pages/detail/detail',
-        src:'image/',
+        src:'/image/',
         text:'母婴'
       },
       {
         id:'6',
         url:'/pages/detail/detail',
-        src:'image/',
+        src:'/image/',
         text:'运动'
       },
       {
         id:'7',
         url:'/pages/detail/detail',
-        src:'image/',
+        src:'/image/',
         text:'零食'
       }
     ],

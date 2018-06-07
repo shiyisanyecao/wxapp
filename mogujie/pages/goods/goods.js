@@ -1,66 +1,63 @@
-// pages/goods/goods.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
+    isLike: true,
+    // banner
+    imgUrls: [
+      "//t00img.yangkeduo.com/t11img/images/2018-05-29/0c7bc4910fdea51b47dbc34ed035513f.jpeg",
+      "//t00img.yangkeduo.com/t08img/images/2018-05-29/d906cc85cccc7ea2a588fa772205b179.jpeg",
+      "//t00img.yangkeduo.com/t01img/images/2018-05-29/9254f82ee10c8ac46bbdc1f29ae10977.jpeg",
+      "//t00img.yangkeduo.com/t07img/images/2018-05-29/f8b28dfb095107805b84da4c8c1ba6d5.jpeg"
+    ],
+    indicatorDots: false, //是否显示面板指示点
+    autoplay: true, //是否自动切换
+    interval: 3000, //自动切换时间间隔,3s
+    duration: 1000, //  滑动动画时长1s
+    chooseSize:false,
+    animationData:{},
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
+  addCart() {
+    var that = this;
+    var animation = wx.createAnimation({
+      duration:500,
+      timingFunction:'linear'
+    })
+    that.animation = animation;
+    animation.translateY(200).step();
+    that.setData({
+      animationData:animation.export(),
+      chooseSize:true
+    })
+    setTimeout(function(){
+      animation.translateY(0).step()
+      that.setData({
+        animationData:animation.export()
+      })
+    },200)
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
+  hideModal() {
+    var that = this;
+    var animation = wx.createAnimation({
+      duration:1000,
+      timingFunction:'linear'
+    })
+    that.animation = animation;
+    animation.translateY(200).step();
+    that.setData({
+      animationData:animation.export()
+    })
+    setTimeout(function(){
+      animation.translateY(0).step()
+      that.setData({
+        animationData:animation.export(),
+        chooseSize:false
+      })
+    },200)
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
+  immeBuy() {
+    wx.showToast({
+      title: '购买成功',
+      icon: 'success',
+      duration: 2000
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
 })

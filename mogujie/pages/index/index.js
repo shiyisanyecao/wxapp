@@ -7,17 +7,17 @@ Page({
     swiper:[
       {
         id:'1',
-        url:'/pages/detail/detail',
+        url:'/pages/goods/goods',
         src:'https://s10.mogucdn.com/mlcdn/c45406/180528_7eadff538c03lb7fckbbheddcl9gk_768x440.jpg'
       },
       {
         id:'2',
-        url:'/pages/detail/detail',
+        url:'/pages/goods/goods',
         src:'https://s10.mogucdn.com/mlcdn/c45406/180529_8d8598dc1l9j6ff9ahadl5lcd8d1a_768x440.jpg'
       },
       {
         id:'3',
-        url:'/pages/detail/detail',
+        url:'/pages/goods/goods',
         src:'https://s10.mogucdn.com/mlcdn/c45406/180530_7k8hakbe8c64db4ce4gaf9gf9bg5j_768x440.jpg'
       }
     ],
