@@ -1,0 +1,80 @@
+<template>
+    <view class="authorize-container">
+        <image class="authorize-icon" src="../images/authorize.png"></image>
+        <view class="auth-item">商城获取以下权限：</view>
+        <view class="auth-item">获取你的公开信息(头像，昵称等)</view>
+        <view class="btn-authorize">
+            <button type="primary" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">授权</button>
+        </view>
+    </view>
+</template>
+<script>
+    import wepy from 'wepy';
+    import api from '@/api/api';
+    import {
+        USER_INFO,
+        USER_SPECIAL_INFO,
+        SYSTEM_INFO
+    } from '@/utils/constant';
+    export default class authorize extends wepy.page {
+        config = {
+            navigationBarTitleText: '授权登录'
+        }
+        async onLoad () {
+            let res = await wepy.getSetting()
+            if((res.authSetting)['scope.userInfo']) {
+                wepy.switchTab({
+                    url:'/pages/home'
+                })
+            }
+        }
+        // async 对函数内部有异步操作变同步的声明
+        async onGotUserInfo (e) {
+            // console.log (e);
+            if(e.detail.errMsg == 'getUserInfo:ok') {
+                // wepy.login 通过用户的头像 nickname 拿到用户的code 异步
+                // await 等一下 异步变同步
+                let res = await wepy.login()
+                console.log(res);
+                if(res.code) {
+                    // await 一下 对Sync 自带同步
+                    // 保存storage 不用再次授权 快一点放到storage存好
+                    wepy.setStorageSync(USER_INFO,e.detail.userInfo);
+                    // 大型项目中 将所有的请求 交给api模块 必须做 api文件模块 负责所有的数据请求 wx.request
+                    // 授权 -> login(code) -> 登录(后端session)
+                    let rlt = await api.wxJsCode2Session({
+                        query: {
+                            jsCode: res.code,
+                            nickName: e.detail.userInfo.nickName
+                        }
+                    });
+                    console.log(rlt);
+                    if(rlt.result) {
+                        let data = rlt.data;
+                        if(data.openid) {
+                            wepy.setStorageSync(USER_SPECIAL_INFO,data.openid);
+                            
+                        }
+                        wepy.switchTab({
+                            url:'/pages/home'
+                        })
+                    } else {
+                        let res = await wepy.showModal({
+                            title:'appid有误',
+                            content:'授权失败'
+                        });
+                        if(res.confirm) {
+                            wepy.switchTab({
+                                url:'/pages/home'
+                            })
+                        }
+                    }
+                }
+            }
+        }
+        data = {
+
+        }
+    }
+</script>
+<style lang="less"></style>

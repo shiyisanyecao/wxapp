@@ -1,0 +1,42 @@
+<template>
+    <!-- 首页列表 -->
+    <!-- 组件 暂无数据的提示 -->
+    <!-- 幻灯片 -->
+    <discover></discover>
+    <bottomLoadMore :message='mes' :show.sync="showLoading"></bottomLoadMore>
+    <placeholder></placeholder>
+    <!-- 弹出广告 -->
+    <bombscreen></bombscreen>
+
+    
+</template>
+<script>
+    // wepy 在本地 node_modules下
+    import wepy from 'wepy'
+    // 将页面换一个视角(切页面) 组件视角(粗 大体)
+    import Bombscreen from '@/components/bomb_screen'
+    import Discover from '@/components/discover'
+    import BottomLoadMore from '@/components/bottomLoadMore'
+    import Placeholder from '@/components/placeholder'
+    // 单页面组件
+    export default class Home extends wepy.page {
+        // 不是json es6的class
+        data = {
+            showLoading: false,
+            mes:'加载更多...'
+        }
+        // 页面的组件构成 多人协作 将复杂度细化 可读性更强
+        components = {
+            bombscreen:Bombscreen,
+            placeholder:Placeholder,
+            bottomLoadMore:BottomLoadMore,
+            discover:Discover
+        }
+        onLoad() {
+            this.showLoading = true;
+        }
+    }
+</script>
+<style lang="less">
+
+</style>

@@ -1,0 +1,12 @@
+<script>
+    import wepy from 'wepy'
+    export default class Bombscreen extends wepy.component {
+        props = {
+            
+        }
+    }
+</script>
+<template>
+    <view></view>
+</template>
+<style lang="less"></style>
