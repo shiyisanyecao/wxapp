@@ -1,5 +1,5 @@
 <view class="weui-cells">
-  <navigator class="weui-cell weui-cell_access head" url="" hover-class="weui-cell_active">
+  <view class="weui-cell weui-cell_access head" bindtap="getUserInfo" hover-class="weui-cell_active">
     <view class="weui-cell__hd">
       <image src="{{userInfo.avatarUrl}}"/>
     </view>
@@ -8,7 +8,7 @@
       <view class="stu_id">{{stu_id}}</view>
     </view>
     <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
-  </navigator>
+  </view>
 </view>
 <view class="weui-cell_all">
   <view wx:for="{{user}}" wx:key="index">

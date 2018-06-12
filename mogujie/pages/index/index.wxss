@@ -49,10 +49,12 @@ swiper {
 .scroll .left {
     flex: 2;
     height: 100px;
+    padding: 10rpx;
 }
 .scroll .right {
     flex: 1;
     height: 100px;
+    padding: 10rpx;
 }
 .blank {
     width: 100%;

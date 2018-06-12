@@ -2,6 +2,9 @@ page {
     display: flex;
     flex-direction: column;
     height: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
     /* 直接设置swiper属性 */
 swiper {
@@ -99,7 +102,7 @@ text {
     color: #fff;
 }
 .choose {
-    height: 700rpx;
+    height: 800rpx;
     width: 100%;
     position: fixed;
     overflow: hidden;
@@ -133,19 +136,127 @@ text {
     left: 260rpx;
     top: 70rpx;
 }
+.choose .container {
+    display: flex;
+    position: absolute;
+    left: 20rpx;
+    top: 260rpx;
+}
+.choose .container1 {
+    display: flex;
+    position: absolute;
+    left: 20rpx;
+    top: 420rpx;
+}
+.choose .container2 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 20rpx;
+    top: 580rpx;
+}
+.box1 {
+    display: flex;
+}
+.box1 .add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60rpx;
+    width: 60rpx;
+    border: 1px solid rgb(73, 71, 71);
+    color: red;
+}
+.box1 .minus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60rpx;
+    width: 60rpx;
+    border: 1px solid rgb(73, 71, 71);
+}
+.button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    height: 100rpx;
+    width: 100%;
+}
+.buttonAdd {
+    flex:1;
+    background: #c47772;
+}
+.buy {
+    flex:1;
+    background: #e95c52;
+}
+.choose .box {
+    padding: 10rpx 40rpx 10rpx 0;
+}
+.choose .p {
+    position: absolute;
+    font-size: 34rpx;
+    left: 20rpx;
+    top: 200rpx;
+}
+.choose .p1 {
+    position: absolute;
+    font-size: 34rpx;
+    left: 20rpx;
+    top: 360rpx;
+}
+.choose .p2 {
+    position: absolute;
+    font-size: 34rpx;
+    left: 20rpx;
+    top: 520rpx;
+}
+.weui_hd {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10rpx;
+    height: 60rpx;
+    width: 140rpx;
+    border: 1px solid rgb(73, 71, 71);
+    border-radius: 6rpx;
+    color: rgb(73, 71, 71);
+}
+.weui_hd2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 60rpx;
+    width: 170rpx;
+    border: 1px solid rgb(73, 71, 71);
+    color: rgb(73, 71, 71);
+}
+.on {
+    border: 1px solid red;
+    color: red;
+}
 .weui {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     border-bottom: 12rpx solid #e9e9e9;
+    width: 100%;
+    height: 100%;
 }
 .dev {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     margin: 15rpx 0;
 }
 .dev image {
-    height: 45rpx;
-    width: 45rpx;
+    height: 35rpx;
+    width: 35rpx;
 }
 .weui p {
     font-size: 25rpx;
@@ -156,8 +267,24 @@ text {
     align-items: center;
     flex-direction: row;
     margin: 15rpx 0;
+    position: relative;
+    border-bottom: 12rpx solid #e9e9e9;
+    padding-top:  20rpx;
+    padding-bottom: 36rpx;
+}
+.size .left {
+    position: absolute;
+    left: 30rpx;
+}
+.size .right {
+    position: absolute;
+    right: 30rpx;
 }
 .size p {
     font-size: 25rpx;
     color: #afa9a9;
+}
+.block image {
+    width: 100%;
+    height: 500px;
 }

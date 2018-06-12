@@ -7,28 +7,34 @@
 </swiper>
 <scroll-view scroll-y="true">
   <view class="detail">
-    <text class="price">￥69</text>
-    <text class="title">夏季新款运动裤女学生韩版原宿bf风潮薄款宽松超火的ins束脚裤</text>
+    <text class="price">{{price}}</text>
+    <text class="title">{{title}}</text>
     <text class="text">免邮费</text>
   </view>
   <navigator class="weui">
     <view class="dev">
-      <image src=""/>
+      <image src="/image/yuangou.png"/>
       <p>72小时发货</p>
     </view>
     <view class="dev">
-      <image src=""/>
+      <image src="/image/yuangou.png"/>
       <p>7天无理由退货</p>
     </view>
     <view class="dev">
-      <image src=""/>
+      <image src="/image/yuangou.png"/>
       <p>延误必赔</p>
     </view>
     <p class="p">></p>
   </navigator>
-  <view class="size">
-    <p>请选择：颜色 尺码</p>
-    <p>></p>
+  <view class="size" bindtap="addCart">
+    <p class="left">{{text}}</p>
+    <p class="right">></p>
+  </view>
+  <view class="block">
+    <image src="//t00img.yangkeduo.com/t08img/images/2018-05-30/2ed6a6619cd2352b201d86a6f6919acd.jpeg"/>
+    <image src="//t00img.yangkeduo.com/t11img/images/2018-05-30/dfb007ed870a5ebacbe32089eceed7c7.jpeg"/>
+    <image src="//t00img.yangkeduo.com/t05img/images/2018-05-30/a8c8552e137cb6070d10cf29e21f667a.jpeg"/>
+    <image src="//t00img.yangkeduo.com/t09img/images/2018-05-30/37d20319e2371cf473ab915d6a7d253a.jpeg"/>
   </view>
 </scroll-view>
 <view class="detail-nav">
@@ -46,9 +52,35 @@
 </view>
 <view class="maskLayer" wx:if="{{chooseSize}}" bindtap="hideModal"></view>
 <view class="choose" wx:if="{{chooseSize}}" animation="{{animationData}}">
-  <image class="image" src="//t00img.yangkeduo.com/t04img/images/2018-05-30/9334d2c1d3bee52881ba883ede24613b.jpeg"/>
-  <text class="price">￥69元</text>
-  <text class="color">请选择 颜色 数量</text>
-  <p>颜色：</p>
-  
+  <image class="image" src="{{src}}"/>
+  <text class="price">￥{{price}}</text>
+  <text class="color">{{text}}</text>
+  <p class="p">尺码：</p>
+  <view class="container">
+    <view class="box" wx:for="{{bodyList}}" wx:key="{{index}}">
+      <view id="{{index}}" class="weui_hd {{currentIndex == index ? 'on' : ''}}" bindtap="selectSize">{{item.title}}</view>
+    </view>
+  </view>
+  <p class="p1">颜色：</p>
+  <view class="container1">
+    <view class="box" wx:for="{{colorList}}" wx:key="{{index}}">
+      <view id="{{index}}" class="weui_hd {{activeIndex == index ? 'on' : ''}}" bindtap="selectColor">{{item.title}}</view>
+    </view>
+  </view>
+  <p class="p2">数量：</p>
+  <view class="container2">
+    <view class="box1" style="color:{{color}};" bindtap="minus">
+      <view class="minus">-</view>
+    </view>
+    <view class="box1">
+      <view class="weui_hd2">{{num}}</view>
+    </view>
+    <view class="box1" bindtap="add">
+      <view class="add">+</view>
+    </view>
+  </view>
+  <view class="button">
+    <button class="buttonAdd" bindtap="addToCart">加入购物车</button>
+    <button class="buy">立即购买</button>
+  </view>
 </view>
