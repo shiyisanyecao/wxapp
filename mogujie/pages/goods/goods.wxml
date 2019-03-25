@@ -38,15 +38,15 @@
   </view>
 </scroll-view>
 <view class="detail-nav">
-  <view class="nav">
+  <navigator class="nav" url="/pages/index/index" open-type="switchTab">
     <image src="/image/shouye.png" /><p>首页</p>
-  </view>
-  <view class="nav">
+  </navigator>
+  <navigator class="nav">
     <image src="/image/kefu1.png"/><p>客服</p>
-  </view>
-  <view class="nav">
-    <image src="/image/shoucang.png"/><p>收藏</p>
-  </view>
+  </navigator>
+  <navigator class="nav" url="/pages/cart/cart" open-type="switchTab">
+    <image src="/image/shoucang.png"/><p>购物车</p>
+  </navigator>
   <button class="button-green" bindtap="addCart" formType="submit">加入购物车</button>
   <button class="button-red" bindtap="immeBuy" formType="submit">立即购买</button>
 </view>

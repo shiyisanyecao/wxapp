@@ -15,3 +15,22 @@
     right: 20rpx;
     top: 19rpx;
 }
+.row {
+    position: absolute;
+    top: 100rpx;
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    flex-wrap: wrap;
+}
+.row-col{
+    width: 360rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.row-col image {
+    display: flex;
+    max-width: 100%;
+}

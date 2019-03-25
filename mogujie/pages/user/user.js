@@ -8,6 +8,8 @@ Page({
   data: {
     stu_id: '3930',
     userInfo: {},
+    canIUser: false,
+    canIUse: true,
     user:[
       {
         id:'1',
@@ -36,11 +38,44 @@ Page({
     ],
   },
   
+  // getUserInfo: function() {
+  //   this.setData({
+  //     userInfo:app.globalData.userInfo
+  //   })
+  // },
+
   getUserInfo: function() {
-    this.setData({
-      userInfo:app.globalData.userInfo
+    wx.getUserInfo({
+      success: res => {
+        // 可以将 res 发送给后台解码出 unionId
+        app.globalData.userInfo = res.userInfo;
+        app.globalData.iv = res.iv;
+        app.globalData.encryptedData = res.encryptedData;
+        this.setData({
+          userInfo:app.globalData.userInfo
+        })
+      }
     })
   },
+
+  bindGetUserInfo: function() {
+    wx.getUserInfo({
+      success: res => {
+        // 可以将 res 发送给后台解码出 unionId
+        app.globalData.userInfo = res.userInfo;
+        app.globalData.iv = res.iv;
+        app.globalData.encryptedData = res.encryptedData;
+        this.setData({
+          userInfo:app.globalData.userInfo
+        })
+      }
+    })
+    this.setData({
+      canIUser: true,
+      canIUse: false
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

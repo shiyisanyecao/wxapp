@@ -1,7 +1,7 @@
 .weui-cell.head {
   padding: 8px 14px;
 }
-.weui-cell.head image {
+.weui-cell.head .weui-cell__hd image{
   width: 134rpx;
   height: 134rpx;
   margin-right: 16px;
